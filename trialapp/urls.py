@@ -3,6 +3,7 @@ from .import views
 
 
 urlpatterns = [
-    path('projects/',views.projects,name="projects"),
-    path('project/<str:pk>/',views.project,name="project"),
+    path('mainproject/',views.projects,name="projects"),
+    path('project_two/<str:pk>/',views.project,name="project"),
+    path('project/',views.project_two,name="project_two"),
 ]
