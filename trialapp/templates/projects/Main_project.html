@@ -1,5 +1,25 @@
 {% extends "main.html" %}
 {% block content %}
+
+{% if number > 10 %}
+<p>number is greater than 10
+</p>
+{% elif number == 10 %}
+<p> number=10</p>
+
+{% else %}
+<p>number is less than 10</p>
+
+{% endif %}
+<h1>Projects</h1>
+{% for i in profiles %}
+<ul>
+    <li><h4>Id:{{i.id}}-----<a href="project/{{i.id}}">Name:{{i.name}}</a>----Description:<a href="{% url 'project' i.id %}">{{i.description}}</a></h4></li>
+</ul>
+
+{% endfor %}
+
+<p>Hello {{message}}</p>
 <h1>Hello welcome</h1>
 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque ipsum temporibus ducimus consequuntur suscipit nihil sunt reprehenderit aperiam cupiditate, sapiente fugiat eos asperiores, quibusdam vel, soluta magnam molestiae eum atque?</p>
 
